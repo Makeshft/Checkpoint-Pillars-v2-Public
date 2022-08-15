@@ -9,7 +9,7 @@ const { logTable } = require('./utils');
 const _app = require('../../server/app');
 const app = require('supertest')(_app);
 
-describe.only('Tier 1: Basic Fields, Class Methods, GET Routes', () => {
+describe('Tier 1: Basic Fields, Class Methods, GET Routes', () => {
   describe('Sequelize', () => {
     before(() => {
       console.log(cyan(`      Take a look at server/db/User.js\n`));
