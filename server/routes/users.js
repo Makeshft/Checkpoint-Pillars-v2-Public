@@ -18,4 +18,13 @@ const {
 
 // Add your routes here:
 
+router.get('/unassigned',async (req, res, next) => {
+  try {
+    const unassigned = await User.findUnassignedStudents();
+    res.status(200).send(unassigned)
+  } catch (e) {
+    next(e)
+  }
+})
+
 module.exports = router;
